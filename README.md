@@ -1,1 +1,1 @@
-"# db-check" 
+DB CHECK

@@ -1,5 +1,6 @@
 import psycopg2
 import os
+import time
 from psycopg2 import Error
 
 connection = ''
@@ -24,3 +25,4 @@ finally:
         cursor.close()
         connection.close()
         print("PostgreSQL connection is closed")
+        time.sleep(180)

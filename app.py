@@ -1,14 +1,15 @@
 import psycopg2
+import os
 from psycopg2 import Error
 
 connection = ''
 
 try:
-    connection = psycopg2.connect(user=input('username:'),
-                                  password=input('password:'),
-                                  host=input('ip:'),
-                                  port=input('port:'),
-                                  database=input('db name:'))
+    connection = psycopg2.connect(user=os.environ.get('USERNAME'),
+                                  password=os.environ.get('PASSWORD'),
+                                  host=os.environ.get('IP'),
+                                  port=os.environ.get('PORT'),
+                                  database=os.environ.get('DB_NAME'))
 
     cursor = connection.cursor()
     cursor.execute("SELECT version();")

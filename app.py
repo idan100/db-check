@@ -4,11 +4,11 @@ from psycopg2 import Error
 connection = ''
 
 try:
-    connection = psycopg2.connect(user=raw_input('username:'),
-                                  password=raw_input('password:'),
-                                  host=raw_input('ip:'),
-                                  port=raw_input('port:'),
-                                  database=raw_input('db name:'))
+    connection = psycopg2.connect(user=input('username:'),
+                                  password=input('password:'),
+                                  host=input('ip:'),
+                                  port=input('port:'),
+                                  database=input('db name:'))
 
     cursor = connection.cursor()
     cursor.execute("SELECT version();")

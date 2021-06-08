@@ -3,5 +3,5 @@ COPY . .
 RUN yum -y install python2
 RUN yum -y --enablerepo=extras install epel-release
 RUN yum -y install python3-pip
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 CMD ["/bin/bash"]
